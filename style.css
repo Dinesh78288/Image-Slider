@@ -1,0 +1,53 @@
+/* Remove margins */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background: #000;
+}
+
+/* Slider takes full screen */
+.slider {
+  position: relative;
+  width: 100%;
+  height: 100vh;  /* Full screen height */
+  overflow: hidden;
+}
+
+/* Images fill the screen */
+.slides img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: none;
+  object-fit: contain;  /* Show full image (no crop) */
+  background: #000;     /* Fill gaps with black */
+}
+
+/* Active image visible */
+.slides img.active {
+  display: block;
+}
+
+/* Navigation buttons */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  border: none;
+  font-size: 2rem;
+  padding: 12px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 100;
+}
+
+.prev:hover, .next:hover {
+  background: rgba(0,0,0,0.8);
+}
+
+.prev { left: 20px; }
+.next { right: 20px; }
